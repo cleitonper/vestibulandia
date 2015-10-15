@@ -1,0 +1,21 @@
+Projeto Vestibulandia
+
+
+O objetivo desta aplicação é reformilar o site vestibulandia.com.br, inicialmente, sem a pretenção de substitui-los. Trata-se apenas de uma aplicação para testar conhecimentos da área de Desenvolvimento Web [:
+
+Foram ultilizados neste projeto:
+
+- AngularJS
+  * ngRoute
+- Youtube API
+
+
+A fazer:
+
+- Pagina de artigo completo
+
+
+Demo disponivel em:
+
+http://cleitonper.github.io/vestibulandia/
+

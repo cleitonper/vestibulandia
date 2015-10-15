@@ -1,0 +1,688 @@
+/**
+* Vestibulandia
+*
+* Folha de Estilos para o site Vestibulandia
+*
+* Definicoes de Reset, Layout,
+* Estilizacao e Componentes
+* para o site Vestibulandia
+*
+*
+* @project   Vestibulandia
+* @version   0.1
+* @author    Cleiton Pereira - cleiton.workspace@gmail.com
+* 
+* @colordef  #19384D; background header
+* @colordef  #333333; background footer
+* @colordef  #FFFFFF; color light
+* @colordef  #333333; color dark
+* @colordef  #19384D; color title
+* @colordef  #87BC27; color link
+* @colordef  #B6D871; color link:visited
+*
+*/
+
+
+/**
+* Reset
+*
+* Retirada estilizacao padrao
+* de alguns elementos do documento
+* e alguns ajustes.
+*
+*
+* @section reset
+*
+*/
+
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body
+{
+  font-family:Arial, Verdana, Helvetica;
+  letter-spacing:0.7px
+  font-size:62.50%;
+}
+
+ul
+{
+  list-style:none;
+}
+
+a
+{
+  text-decoration:none;
+  color:#87BC27;
+}
+
+h2
+{
+  padding-bottom:35px;
+  color:#19384D;
+}
+
+h3
+{
+  padding-bottom:7px;
+  color:#333;
+}
+
+article
+{
+	margin-bottom:60px;
+}
+
+.clearfix:after
+{
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.clearleft
+{
+    clear:left;
+}
+
+.formfield
+{
+    height:40px;
+    width:calc(100% - 49px);
+    padding:10px 10px 15px 5px;
+    margin-bottom:5px;
+    border-radius:0;
+    border:1px solid #CCC;
+}
+
+.formfield:focus
+{
+    border:1px solid #87BC27;
+    outline-color:aquamarine;
+}
+
+.formfield:focus:not(textarea)
+{
+    height:39px;
+}
+
+.textarea
+{
+    min-height:100px;
+}
+
+.container-inline
+{
+    float:left;
+}
+
+.container-block
+{
+    display:block;
+}
+
+.btn
+{
+    padding:14px 24px;
+    border:0 none;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus
+{
+    outline:0 none;
+}
+ 
+.btn-primary
+{
+    background:#0099CC;
+    color:#FFF;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33A6CC;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background:#007299;
+    box-shadow:none;
+}
+
+.btn-rounded 
+{
+  border-radius:3px;
+}
+
+.btn-block
+{
+	display:block;
+	width:80.3%;
+}
+
+
+/**
+* Estilizacao a partir de 520px
+*
+* Estilizacao para dispositivos
+* de resolucao ate 520px de largura.
+*
+*
+* @section    520px 
+*
+*
+* Quando a view tiver 500px de
+* largura, é exibido o titulo
+* "Plantão de Dúvidas" no
+* topo direiro do site
+*/
+
+@media screen and (min-width: 520px)
+{
+    header > a:after
+    {
+        content:"Plantão de Dúvidas";
+    }
+}
+
+
+
+/**
+* Estilizacao até 1023px
+*
+* Estilizacao para dispositivos
+* de resolucao ate 999px de largura
+*
+*
+* @section    1023px
+*
+*
+* Enquanto a view tiver menos de
+* 1023px de largura, é exibido o
+* menu Mobile
+*
+*
+* @component  menu
+*
+* #botao-menu check box
+* - quando marcado exibe o menu do site
+* - é marcado pelo botao .abre-menu
+* - é desmarcado pelo botao .abre-menu
+*
+* .abre-menu  label
+* - ultilizado para abertura
+*  e fechamento do menu
+*
+* .cortina    label
+* - sombra que cobre o conteudo
+*  quando o menu esta visivel
+*
+*/
+
+header #botao-menu
+{
+  display:none;
+}
+
+@media screen and (max-width: 1023px) 
+{
+    header h1
+    {    
+        position:absolute;
+        top:10px;
+        left:60px;
+    }
+
+    header .abre-menu
+    {
+        position:absolute;
+        left:20px;
+        top:20px;
+        display:block;
+        width:30px;
+        padding:5px 0;
+        border:solid #FFF;
+        border-width:3px 0;
+        z-index:2;
+        cursor:pointer;
+    }
+
+    header .abre-menu:before
+    {
+        content:"";
+        display:block;
+        height:3px;
+        background:#FFF;
+    }
+
+
+    header .cortina
+    {
+        position:fixed;
+        top:60px;
+        left:0;
+        right:0;
+        bottom:0;
+        background:rgba(0, 0, 0, 0.4);
+        display:none;
+        z-index:1;
+    }
+
+    header nav
+    {
+        position:fixed;
+        top:60px;
+        left:0;
+        bottom:0;
+        width:250px;
+        background:#19384D;
+        z-index:3;
+        -webkit-transition:all 500ms ease;
+        transition:all 500ms ease;
+        -webkit-transform:translate(-100%, 0);
+        -ms-transform:translate(-100%, 0);
+        transform:translate(-100%, 0);
+    }
+
+    header nav li
+    {
+        line-height:2em;
+        padding:5px 20px;
+    }
+    
+    header nav li ul
+    {
+        height:0;
+    }
+    
+    header nav li:hover ul
+    {
+        height:auto;
+    }
+
+
+    #botao-menu:checked ~ nav
+    {
+        -webkit-transform:translate(0, 0);
+        -ms-transform:translate(0, 0);
+        transform:translate(0, 0);
+    }
+
+    #botao-menu:checked ~ .cortina
+    {
+        display:block;
+    }
+    
+    header > a
+    {
+        position:absolute;
+        top:10px;
+        right:3px;
+    }
+}
+
+
+
+/**
+* Estilizacao a partir de 1024px
+*
+* Estilizacao para dispositivos
+* de resolucao ate 1024px de largura.
+*
+*
+* @section    1024px 
+*
+*
+* Quando a view tiver 1024px de
+* largura, o menu é apresentado
+* de forma horizontal, e não mais
+* no estilo Mobile.
+*
+* Quando a view tiver 1024px de
+* largura, o site tem o seu conteudo
+* dividido em duas colunas na pagina
+* inicio
+*
+*/
+
+@media screen and (min-width: 1024px)
+{
+    
+    header h1
+    {
+        text-align:center;
+    }
+    
+    header nav
+    {
+        text-align:center;
+        margin-top:10px;
+    }
+    
+    header nav ul li
+    {
+        display:inline-block;
+        position:relative;
+        width:150px;
+    }
+    
+    header nav li ul
+    {
+        position:absolute;
+        top:100%;
+        left:0;
+        background:#19384D;
+        line-height:2em;
+    }
+
+
+    nav ul li a
+    {
+        font-size:18px;
+        font-weight:600;
+    }
+    
+    header > a
+    {
+        position:absolute;
+        top:3px;
+        right:3px;
+    }
+    
+    main #videos-novos article
+    {
+        min-height:650px;
+    }
+    
+    main #artigos-novos article
+    {
+        min-height:150px;
+    }
+    
+    
+    /**
+    * @class       coluna
+    *
+    * Classe ultilizada para dividir
+    * conteudos em duas colunas
+    *
+    */
+
+    .coluna
+    {
+        width:47%;
+        float:left;
+        margin-bottom:80px;
+
+    }
+
+    .coluna:nth-child(even)
+    {
+        margin-right:6%;
+    }
+}
+
+
+
+/**
+* Header
+*
+* Definicoes de estilo do cabecalho
+* para todas as resolucoes
+*
+*
+* @section header
+*
+*/
+
+header
+{
+    background:#19384D;
+    min-height:60px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:2;
+}
+
+header h1
+{
+    color:#FFF;
+}
+
+header nav li a
+{
+    color:#FFF;
+    -webkit-transition:color 600ms ease;
+    transition:color 600ms ease;
+}
+
+nav ul li a:hover
+{
+    color:#CCC;
+}
+
+header nav .active
+{
+    border-left:5px solid #FFF;
+    padding-left:10px;
+}
+
+header nav li ul
+{
+    visibility:hidden;
+    opacity:0;
+    -webkit-transition:opeacity 600ms ease;
+    transition:opacity 600ms ease;
+}
+
+header nav li:hover ul
+{
+    visibility:visible;
+    opacity:1;
+}
+
+header > a
+{
+    display:block;
+    border:1px solid rgba(255, 255, 255, .2);
+    background:#E74C3C;
+    color:#FFF;
+    padding:5px 10px 5px 0;
+    font-size:18px;
+}
+
+header > a[class^="icon"]:before
+{
+    padding:0 10px;
+}
+
+
+
+/**
+* Main
+*
+* Definicoes de estulizacao da area
+* de conteudo principal da pagina
+*
+*
+* @section main
+*
+*/
+
+main
+{
+  width:90%;
+  margin:20px auto;
+  margin-top:80px;
+  min-height:calc(100vh - 164px);
+  z-index:1;
+}
+
+/**
+* Inicio
+*
+* Definicoes de estilizacao para
+* pagina inicio
+*
+* @section main
+* @subsection inicio
+*
+*/
+
+main #inicio article
+{
+  padding-bottom:80px;
+}
+
+main #inicio article p
+{
+  margin-bottom:0.5em;
+}
+
+main #inicio article li
+{
+  margin-left:5px;
+  line-height:1.5em;
+}
+
+main #inicio li:before
+{
+  content:'-';
+  padding-right:5px;
+}
+
+main #inicio #videos-novos
+{
+  border-bottom:1px dashed #87BC27;
+  margin-bottom:50px;
+}
+
+main #inicio #videos-novos iframe[id^="novo-video"]
+{
+  width:100%;
+  margin-bottom:20px;
+}
+
+
+
+/**
+* Aulas
+*
+* Definicoes de estilizacao para
+* pagina aulas
+*
+* @section main
+* @subsection aulas
+*
+*/
+
+main #aulas section
+{
+    width:100%;
+    margin-bottom:30px;
+}
+
+main #aulas section iframe[id^="video"]
+{
+    width:100%;
+    height:600px;
+}
+
+
+
+/**
+* Contato
+*
+* Definicoes de estilizacao para
+* pagina contato
+*
+* @section main
+* @subsection contato
+*
+*/
+
+main #contato > span[class^="icon"]
+{
+    margin-right:5px;
+    color:#87BC27;
+    font-size:25px;
+}
+
+main #contato div
+{
+    margin-bottom:30px;
+    width:calc(100% - 50px);
+}
+
+main #contato h3
+{
+    margin-bottom:7px;
+}
+
+main #contato form
+{
+    max-width:500px;
+}
+
+main #contato div span[class^="icon"]:before
+{
+    padding:0 5px;
+    font-size:20px;
+}
+
+main #contato div span
+{
+    display:block;
+    margin-bottom: 5px;
+}
+
+main #contato div label
+{
+    height:40px;
+    padding:12px;
+    background:#F3F3F3;
+    border:solid #CCC;
+    border-top-width:1px;
+    border-right-width:0;
+    border-bottom-width:1px;
+    border-left-width:1px;
+    display:block;
+}
+
+main #contato form .btn
+{
+	margin-left:40px;
+	width:calc(100% - 49px);
+}
+
+/**
+* Footer
+*
+* Definicoes de estulizacao do rodape
+*
+*
+* @section main
+*
+*/
+
+footer
+{
+  width:100%;
+  min-height:60px;
+  background:#333;
+  padding:20px 30px;
+}
+
+footer h4
+{
+  color:#FFF;
+  font-size:1.3em;
+  text-align:center;
+}
