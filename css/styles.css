@@ -659,7 +659,7 @@ main #contato div label
 main #contato form .btn
 {
 	margin-left:40px;
-	width:calc(100% - 49px);
+	width:calc(100% - 47px);
 }
 
 /**
