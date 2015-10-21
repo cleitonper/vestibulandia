@@ -1,5 +1,5 @@
 <?php
-	$pagina = $_GET['pagina'];
+	$pagina = isset($_GET['pagina']) ? $_GET['pagina'] : NULL;
 	
 	switch($pagina)
 	{
@@ -19,7 +19,7 @@
 			include 'aulas-fisica.php';
 			break;
 		case 'quimica':
-			include 'aulas-qumica.php';
+			include 'aulas-quimica.php';
 			break;
 		case 'artigos':
 			include 'artigos.php';
