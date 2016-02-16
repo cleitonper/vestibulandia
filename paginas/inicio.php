@@ -3,7 +3,7 @@
     <h2>Novos videos</h2>
 
     <article class="coluna">
-      <div id="novo-video01"></div>
+      <img src="img/quimica.jpg"/>
       <h3>Extensivo Química - Aula 10</h3>
       <p>Nesta aula veremos:</p>
       <ul>
@@ -22,7 +22,7 @@
     </article>
 
     <article class="coluna">
-      <div id="novo-video02"></div>
+      <img src="img/quimica.jpg"/>
       <h3>Extensivo Química - Aula 09</h3>
       <p>Nesta aula veremos:</p>
       <ul>
@@ -34,7 +34,7 @@
     </article>
 
     <article class="coluna">
-      <div id="novo-video03"></div>
+      <img src="img/quimica.jpg"/>
       <h3>Extensivo Química - Aula 08</h3>
       <p>
         Nesta aula veremos a nomenclatura
@@ -44,7 +44,7 @@
     </article>
 
     <article class="coluna">
-      <div id="novo-video04"></div>
+      <img src="img/quimica.jpg"/>
       <h3>Extensivo Química - Aula 07</h3>
       <p>Nesta aula veremos a nomenclatura e propriedades básicas dos sais, ocorrências e aplicações.</p>
     </article>

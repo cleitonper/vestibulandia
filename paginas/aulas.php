@@ -4,25 +4,25 @@
     <section id="matematica-zero">
        <h3>Matemática Zero</h3>
        
-       <dvi id="video01"></dvi>
+      <img src="img/matematica.jpg"/>
     </section>
       
       <section id="matematica">
        <h3>Matemática</h3>
        
-       <dvi id="video02"></dvi>
+      <img src="img/matematica.jpg"/>
     </section>
     
     <section id="Fisica">
        <h3>Física</h3>
        
-       <dvi id="video03"></dvi>
+       <img src="img/quimica.jpg"/>
     </section>
     
     <section id="quimica">
        <h3>Química</h3>
        
-       <dvi id="video04"></dvi>
+      <img src="img/quimica.jpg"/>
     </section>
     
     

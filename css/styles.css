@@ -525,6 +525,13 @@ main
   z-index:1;
 }
 
+main section img
+{
+  width:100%;
+  height:auto;
+  margin-bottom:20px;
+}
+
 /**
 * Inicio
 *
@@ -562,12 +569,6 @@ main #inicio #videos-novos
 {
   border-bottom:1px dashed #87BC27;
   margin-bottom:50px;
-}
-
-main #inicio #videos-novos iframe[id^="novo-video"]
-{
-  width:100%;
-  margin-bottom:20px;
 }
 
 
