@@ -92,9 +92,7 @@ article
 .formfield
 {
     height:40px;
-    width:calc(100% - 49px);
     padding:10px 10px 15px 5px;
-    margin-bottom:5px;
     border-radius:0;
     border:1px solid #CCC;
 }
@@ -440,7 +438,7 @@ header #botao-menu
 *
 */
 
-header
+body > header
 {
     background:#19384D;
     min-height:60px;
@@ -644,10 +642,11 @@ main #contato div span
     margin-bottom: 5px;
 }
 
-main #contato div label
+main #contato form label
 {
     height:40px;
     padding:12px;
+	margin-botton:5px;
     background:#F3F3F3;
     border:solid #CCC;
     border-top-width:1px;
@@ -655,13 +654,64 @@ main #contato div label
     border-bottom-width:1px;
     border-left-width:1px;
     display:block;
+	width:45px;
+	float:left;
+}
+
+main #contato form .formfield
+{
+  display:block;
+  width:calc(100% - 45px);
+  margin-bottom:15px;
+  float-left;
 }
 
 main #contato form .btn
 {
-	margin-left:40px;
-	width:calc(100% - 47px);
+	margin-left:45px;
+	width:calc(100% - 45px);
 }
+
+/**
+* Login
+*
+* Definicoes de estilizacao para
+* pagina login
+*
+* @section main
+* @subsection login
+*
+*/
+
+main #login form
+{
+  border-bottom:1px dashed #87BC27;
+  display:block;
+  min-width:300px;
+  max-width:320px;
+  margin:0 auto;
+  padding-bottom:15px;
+}
+
+
+main #login form header
+{
+  padding:15px 0;
+  text-align:center;
+}
+
+main #login form input
+{
+  margin:0 auto 10px;
+  display:block;
+  width:80%;
+}
+
+main #login form button
+{
+  margin:0 auto;
+}
+
 
 /**
 * Footer
@@ -669,7 +719,7 @@ main #contato form .btn
 * Definicoes de estulizacao do rodape
 *
 *
-* @section main
+* @section footer
 *
 */
 

@@ -20,16 +20,16 @@
     <div class="container-inline">
         <h3>Deixe seu comentário</h3>
         <form>
-            <label class="container-inline clearleft icon-user2" for="nome"></label>
-            <input class="container-inline formfield" id="nome" type="text" placeholder="Nome"/>
+            <label class="clearleft icon-user2" for="nome"></label>
+            <input class="formfield" id="nome" type="text" placeholder="Nome"/>
             
-            <label class="container-inline clearleft icon-mail" for="email"></label>
+            <label class="clearleft icon-mail" for="email"></label>
             <input class="formfield" id="email" type="email" placeholder="Email"/>
             
-            <label class="container-inline clearleft icon-article" for="assunto"></label>
+            <label class="clearleft icon-article" for="assunto"></label>
             <input class="formfield" id="assunto" type="text" placeholder="Assunto"/>
             
-            <label class="container-inline clearleft icon-message" for="mensagem"></label>
+            <label class="clearleft icon-message" for="mensagem"></label>
             <textarea class="formfield textarea" id="mensagem" placeholder="Mensagem"></textarea>
 
             <button class="btn btn-primary btn-rounded btn-block">Enviar Comentário</button>

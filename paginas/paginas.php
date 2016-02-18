@@ -27,8 +27,11 @@
 		case 'contato':
 			include 'contato.php';
 			break;
+		case 'login':
+			include 'login.php';
+			break;
 		default:
-			include 'contato.php';
+			include 'login.php';
 			break;
 	}
 ?>
